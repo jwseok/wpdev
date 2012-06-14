@@ -17,7 +17,7 @@
 		<DataTemplate x:Key="ItemTemplate">
 			<Grid Height="118" Width="458">
 				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="0.280*"/>
+					<ColumnDefinition Width="0.279*"/>
 					<ColumnDefinition Width="0.721*"/>
 				</Grid.ColumnDefinitions>
 				<TextBlock Text="{Binding Contents}" d:LayoutOverrides="Width, Height, GridBox" Grid.Column="1" Margin="15,58,-3,33" HorizontalAlignment="Left"/>
