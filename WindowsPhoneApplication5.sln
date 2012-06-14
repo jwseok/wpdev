@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhoneApplication5", "WindowsPhoneApplication5\WindowsPhoneApplication5.csproj", "{45fbd88e-c860-4fd6-b31b-db4ae548d216}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45FBD88E-C860-4FD6-B31B-DB4AE548D216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45FBD88E-C860-4FD6-B31B-DB4AE548D216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45FBD88E-C860-4FD6-B31B-DB4AE548D216}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{45FBD88E-C860-4FD6-B31B-DB4AE548D216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45FBD88E-C860-4FD6-B31B-DB4AE548D216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45FBD88E-C860-4FD6-B31B-DB4AE548D216}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

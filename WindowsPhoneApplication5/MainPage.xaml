@@ -1,0 +1,50 @@
+﻿<phone:PhoneApplicationPage
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+	x:Class="WindowsPhoneApplication5.MainPage"
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+	FontSize="{StaticResource PhoneFontSizeNormal}"
+	Foreground="{StaticResource PhoneForegroundBrush}"
+	SupportedOrientations="Portrait" Orientation="Portrait"
+	shell:SystemTray.IsVisible="True">
+	<phone:PhoneApplicationPage.Resources>
+		<DataTemplate x:Key="ItemTemplate">
+			<Grid Height="118" Width="458">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="0.279*"/>
+					<ColumnDefinition Width="0.721*"/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Text="{Binding Contents}" d:LayoutOverrides="Width, Height, GridBox" Grid.Column="1" Margin="15,58,-3,33" HorizontalAlignment="Left"/>
+				<Image Source="{Binding Image}" Margin="5"/>
+				<TextBlock Text="{Binding Name}" VerticalAlignment="Top" d:LayoutOverrides="Width, GridBox" Grid.Column="1" Margin="15,25,0,0" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold"/>
+			</Grid>
+		</DataTemplate>
+	</phone:PhoneApplicationPage.Resources>
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<!--Pivot Control-->
+		<controls:Pivot Name="jwPivot" Title="MY ALBUM :D" GotFocus="jwPivot_GotFocus">
+			<!--Pivot item one-->
+			<controls:PivotItem Header="List" DataContext="{Binding Source={StaticResource SampleDataSource}}">
+				<!--Double line list with text wrapping-->
+				<ListBox x:Name="ListBox" ItemsSource="{Binding Collection}" Margin="0,0,-12,0" ItemTemplate="{StaticResource ItemTemplate}" SelectionChanged="ListBox_SelectionChanged" />
+			</controls:PivotItem>
+
+			<!--Pivot item two-->
+			<controls:PivotItem Header="View">
+				<StackPanel x:Name="ViewDetail">
+                    <Image Height="406" Name="image1" Stretch="Fill" Width="329" />
+                    <TextBlock Height="117" Name="textBlock1" Text="" Width="379" Margin="0,40,0,0" />
+                </StackPanel>
+                <!--Triple line list no text wrapping-->
+			</controls:PivotItem>
+		</controls:Pivot>
+	</Grid>
+</phone:PhoneApplicationPage>
